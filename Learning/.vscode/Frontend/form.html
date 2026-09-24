@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML Forms</title>
+</head>
+
+<body>
+
+    <!-- form ប្រើសម្រាប់បង្កើត Form ដើម្បីទទួលទិន្នន័យពី User -->
+    <form>
+
+        <!-- label ប្រើសម្រាប់បង្ហាញឈ្មោះរបស់ Input -->
+        <label for="name">ឈ្មោះ:</label>
+
+        <!-- input ប្រើសម្រាប់ឱ្យ User បញ្ចូលទិន្នន័យ -->
+        <input type="text" id="name" name="name">
+
+        <br><br>
+
+        <!-- label សម្រាប់ Email -->
+        <label for="email">Email:</label>
+
+        <!-- input ប្រភេទ email ប្រើសម្រាប់បញ្ចូល Email -->
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <label for="message">សារ:</label>
+
+        <br>
+        <!-- textarea ប្រើសម្រាប់បញ្ចូលអត្ថបទវែង -->
+        <textarea id="message" name="message" rows="5" cols="40"></textarea>
+
+        <br><br>
+
+        <!-- select ប្រើសម្រាប់បង្កើត Dropdown -->
+        <label for="country">ប្រទេស:</label>
+
+        <select id="country" name="country">
+
+            <!-- option គឺជាជម្រើសមួយនៅក្នុង Dropdown -->
+            <option value="cambodia">Cambodia</option>
+
+            <!-- option គឺជាជម្រើសមួយទៀត -->
+            <option value="thailand">Thailand</option>
+
+            <!-- option គឺជាជម្រើសមួយទៀត -->
+            <option value="vietnam">Vietnam</option>
+
+        </select>
+
+        <br><br>
+
+        <!-- optgroup ប្រើសម្រាប់បែងចែក Option ជាក្រុម -->
+        <label for="course">វគ្គសិក្សា:</label>
+
+        <select id="course" name="course">
+
+            <!-- optgroup នេះជាក្រុម Frontend -->
+            <optgroup label="Frontend">
+
+                <!-- option គឺជាជម្រើសក្នុងក្រុម -->
+                <option value="html">HTML</option>
+
+                <option value="css">CSS</option>
+
+                <option value="javascript">JavaScript</option>
+
+            </optgroup>
+
+            <!-- optgroup នេះជាក្រុម Backend -->
+            <optgroup label="Backend">
+
+                <option value="python">Python</option>
+
+                <option value="php">PHP</option>
+
+                <option value="java">Java</option>
+
+            </optgroup>
+
+        </select>
+
+        <br><br>
+
+        <!-- fieldset ប្រើសម្រាប់ដាក់ Form Elements ជាក្រុម -->
+        <fieldset>
+
+            <!-- legend ប្រើសម្រាប់ដាក់ចំណងជើងឱ្យ fieldset -->
+            <legend>ព័ត៌មានផ្ទាល់ខ្លួន</legend>
+
+            <label for="fullname">ឈ្មោះពេញ:</label>
+
+            <input type="text" id="fullname" name="fullname">
+
+            <br><br>
+
+            <label for="phone">លេខទូរស័ព្ទ:</label>
+
+            <input type="tel" id="phone" name="phone">
+
+        </fieldset>
+
+        <br><br>
+
+        <!-- datalist ប្រើសម្រាប់បង្ហាញជម្រើស Suggestion -->
+        <label for="browser">Browser:</label>
+
+        <input list="browsers" id="browser" name="browser">
+
+        <!-- datalist ផ្ទុកជម្រើសដែល User អាចជ្រើស -->
+        <datalist id="browsers">
+
+            <!-- option ជាជម្រើសមួយក្នុង datalist -->
+            <option value="Google Chrome">
+
+            <option value="Firefox">
+
+            <option value="Microsoft Edge">
+
+            <option value="Safari">
+
+        </datalist>
+
+        <br><br>
+
+        <!-- output ប្រើសម្រាប់បង្ហាញលទ្ធផល -->
+        <label>លទ្ធផល:</label>
+
+        <output id="result">100</output>
+
+        <br><br>
+
+        <!-- button ប្រើសម្រាប់បង្កើតប៊ូតុង -->
+        <button type="submit">
+            បញ្ជូន
+        </button>
+
+        <!-- button ប្រភេទ reset ប្រើសម្រាប់លុបទិន្នន័យក្នុង Form -->
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+</body>
+
+</html>

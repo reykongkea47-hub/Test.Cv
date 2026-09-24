@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- កំណត់ Character Encoding ឱ្យ HTML អាចបង្ហាញខ្មែរ និងភាសាផ្សេងៗបាន -->
+    <meta charset="UTF-8">
+    <!-- ធ្វើឱ្យ Website Responsive នៅលើ Phone, Tablet និង Computer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- កំណត់ចំណងជើងដែលបង្ហាញនៅ Browser Tab -->
+    <title>My HTML Learning</title>
+    <link rel="icone" href="">
+        <link rel="icon" type="image/png" href="/img/images.jpg">
+</head>
+
+<body>
+    <!-- ប្រើសម្រាប់បង្កើតចំណងជើង    -->
+    
+
+    <h1>HTML Learning</h1>
+    <h2>HTML Introduction</h2>
+    <h3>HTML Basic</h3>
+
+
+    <!-- HTML PARAGRAPHS        -->
+    <!-- ប្រើសម្រាប់សរសេរ Paragraph        -->
+    
+    <p> HTML is used to create the structure of a website.</p>
+
+    <!-- HTML TEXT FORMATTING      -->
+    <!-- ប្រើសម្រាប់ធ្វើឱ្យ Text មាន Style -->
+
+    <b>Bold Text</b>
+
+    <strong>Important Text</strong>
+
+    <i>Italic Text</i>
+
+    <em>Emphasized Text</em>
+
+    <mark>Highlighted Text</mark>
+
+    <small> text small</small>
+
+    <del> delete text</del>
+
+    X<sup>2</sup>
+
+    H<sub>2</sub>O
+
+
+    <!-- HTML LINKS            -->
+    <!-- ប្រើសម្រាប់បង្កើត Link   -->
+    <!--មានពីរ   គឺ ancher   ,   target="_blak"-->
+
+
+    <a href="https://www.google.com">
+        Go to Google
+    </a>
+    <a target="_blank" href="https://www.google.com">
+        click me 
+    </a>
+    <a target="_parent" href="https://www.google.com">
+        Hello
+    </a>
+
+    <!-- HTML IMAGES     -->
+    <!-- ប្រើសម្រាប់បង្ហាញរូបភាព             -->
+    <img src="/img/images.jpg" alt="My Image"width="300">
+
+    <!-- HTML BUTTON                        -->
+    <!-- ប្រើសម្រាប់បង្កើត Button           -->
+
+    <button>Click Me</button>
+
+    <!-- HTML LIST                          -->
+    <!-- ប្រើសម្រាប់បង្កើតបញ្ជី               -->
+
+    <!-- Unordered List = បញ្ជីមាន Bullet -->
+    <ul>
+
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+    </ul>
+
+
+    <!-- Ordered List = បញ្ជីមានលេខ -->
+    <ol>
+
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+
+    </ol>
+
+
+    <!-- HTML TABLE                         -->
+    <!-- ប្រើសម្រាប់បង្ហាញ Data ជា Table    -->
+
+    <table border="1">
+
+        <!-- Table Header -->
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        <!-- Table Data -->
+        <tr>
+            <td>1</td>
+            <td>Kongkea</td>
+            <td>HTML</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Dara</td>
+            <td>CSS</td>
+        </tr>
+
+    </table>
+
+
+  
+    <!-- HTML DIV    -->
+    <!-- ប្រើសម្រាប់ Group Content     -->
+
+    <div>
+
+        <h2>About Me</h2>
+
+        <p>
+            My name is Kongkea.
+        </p>
+
+    </div>
+
+
+   
+    <!-- HTML CLASS                         -->
+    <!-- ប្រើសម្រាប់កំណត់ Group/Style       -->
+
+    <p class="student">
+        Student Information
+    </p>
+
+
+    <!-- HTML ID                            -->
+    <!-- ប្រើសម្រាប់សម្គាល់ Element មួយ      -->
+
+    <h2 id="about">
+        About
+    </h2>
+
+
+    <!-- HTML FORM                          -->
+    <!-- ប្រើសម្រាប់ទទួល Input ពី User      -->
+
+    <form>
+
+        <!-- Input សម្រាប់ឈ្មោះ -->
+        <label>Full Name:</label>
+
+        <input
+            type="text"
+            placeholder="Enter your name"
+        >
+
+        <br><br>
+
+
+        <!-- Input សម្រាប់ Email -->
+        <label>Email:</label>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+        >
+
+        <br><br>
+
+
+        <!-- Input សម្រាប់ Password -->
+        <label>Password:</label>
+
+        <input
+            type="password"
+            placeholder="Enter password"
+        >
+
+        <br><br>
+
+
+        <!-- Input សម្រាប់លេខ -->
+        <label>Age:</label>
+
+        <input
+            type="number"
+            placeholder="Enter age"
+        >
+
+        <br><br>
+
+
+        <!-- Radio Button សម្រាប់ជ្រើសរើសមួយ -->
+        <label>Gender:</label>
+
+        <input
+            type="radio"
+            name="gender"
+        >
+        Male
+
+        <input
+            type="radio"
+            name="gender"
+        >
+        Female
+
+        <br><br>
+
+
+        <!-- Checkbox សម្រាប់ជ្រើសរើសច្រើន -->
+        <label>Skills:</label>
+
+        <input type="checkbox">
+        HTML
+
+        <input type="checkbox">
+        CSS
+
+        <input type="checkbox">
+        JavaScript
+
+        <br><br>
+
+
+        <!-- Select Dropdown -->
+        <label>Course:</label>
+
+        <select>
+
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+
+        </select>
+
+        <br><br>
+
+
+        <!-- Textarea សម្រាប់សរសេរ Text ច្រើន -->
+        <label>Message:</label>
+
+        <br>
+
+        <textarea
+            rows="5"
+            cols="30"
+            placeholder="Write your message"
+        ></textarea>
+
+        <br><br>
+
+
+        <!-- Submit Button សម្រាប់ Submit Form -->
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+    <!-- HTML SEMANTIC ELEMENTS             -->
+    <!-- ប្រើសម្រាប់រៀបចំ Structure Website -->
+
+
+    <header>
+        Website Header
+    </header>
+
+    <nav>
+        Home | About | Contact
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>HTML Course</h2>
+
+            <p>
+                Learn HTML from beginner to advanced.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 CodeLearning
+    </footer>
+
+
+    <!-- ================================= -->
+    <!-- HTML JAVASCRIPT                    -->
+    <!-- ប្រើសម្រាប់បន្ថែម Interaction       -->
+    <!-- ================================= -->
+
+    <button onclick="alert('Hello!')">
+        Click Me
+    </button>
+
+
+    <!-- ================================= -->
+    <!-- HTML COMMENT                       -->
+    <!-- Comment មិនបង្ហាញនៅលើ Website     -->
+    <!-- ================================= -->
+
+    <!-- នេះជា Comment -->
+
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- កំណត់ Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- ធ្វើឱ្យ Website Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ចំណងជើងដែលបង្ហាញនៅលើ Browser Tab -->
+    <title>HTML Complete Practice</title>
+
+    <!-- ដាក់ Icon នៅលើ Browser Tab -->
+    <link rel="icon" type="image/png" href="./img/image.png">
+
+</head>
+
+<body>
+
+    <h1>HTML Complete Practice</h1>
+
+    <!-- class អាចប្រើជាមួយ Element ច្រើន -->
+    <h2 class="title">Class Example 1</h2>
+    <h2 class="title">Class Example 2</h2>
+
+    <!-- id ប្រើសម្រាប់សម្គាល់ Element ជាក់លាក់ -->
+    <p id="description">
+        This paragraph has a unique ID.
+    </p>
+
+<!-- ចំណងជើងរបស់ Table --> 
+ <h1>Student Information</h1> 
+ <!-- បង្កើត Table --> 
+  <table border="10">
+     <!-- ផ្នែកក្បាលរបស់ Table --> 
+      <thead> 
+        <!-- បង្កើតជួរដេក --> 
+        <tr> 
+            <!-- បង្កើតក្បាល Column --> 
+            <th>ID</th> <th>ឈ្មោះ</th>
+            <th>អ៊ីមែល</th> 
+            <th>អាយុ</th> 
+        </tr> </thead> 
+        <!-- ផ្នែកទិន្នន័យ --> 
+         <tbody> 
+            <!-- ជួរដេកទី 1 -->
+             <tr> 
+                <td>1</td> 
+                <td>Kongkea</td> 
+                <td>kongkea@gmail.com</td> 
+                <td>20</td> 
+            </tr> 
+            <!-- ជួរដេកទី 2 --> 
+            <tr> 
+                <td>2</td> 
+                <td>Dara</td> 
+                <td>dara@gmail.com</td> 
+                <td>21</td> 
+            </tr> 
+            <!-- ជួរដេកទី 3 --> 
+            <tr> 
+                <td>3</td> 
+                <td>Sokha</td> 
+                <td>sokha@gmail.com</td> 
+                <td>22</td> 
+            </tr> 
+        </tbody> 
+        <!-- ផ្នែកខាងក្រោមរបស់ Table --> 
+         <tfoot> 
+            <tr> <!-- រួម 4 Columns ជាមួយគ្នា -->
+                 <td colspan="4"> ចំនួនសិស្សសរុប: 3 នាក់ </td> 
+            </tr> 
+         </tfoot> 
+        </table>
+
+    <h2>HTML Input Types</h2>
+
+    <!-- បង្កើត Form សម្រាប់ទទួលទិន្នន័យពី User -->
+    <form>
+
+        <!-- Input សម្រាប់បញ្ចូលអក្សរធម្មតា -->
+        <label for="name">Name:</label>
+
+        <input
+            type="text"
+            id="name"
+            class="form-input"
+            placeholder="Enter your name"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ Password -->
+        <label for="password">Password:</label>
+
+        <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="Enter password"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ Email -->
+        <label for="email">Email:</label>
+
+        <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="example@gmail.com"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់លេខ -->
+        <label for="age">Age:</label>
+
+        <input
+            type="number"
+            id="age"
+            min="1"
+            max="100"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់លេខទូរស័ព្ទ -->
+        <label for="phone">Phone:</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="012 345 678"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ Website URL -->
+        <label for="website">Website:</label>
+
+        <input
+            type="url"
+            id="website"
+            placeholder="https://example.com"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ Search -->
+        <label for="search">Search:</label>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Search here..."
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសថ្ងៃ -->
+        <label for="birthday">Birthday:</label>
+
+        <input
+            type="date"
+            id="birthday"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសម៉ោង -->
+        <label for="time">Time:</label>
+
+        <input
+            type="time"
+            id="time"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសថ្ងៃ និងម៉ោង -->
+        <label for="meeting">Meeting:</label>
+
+        <input
+            type="datetime-local"
+            id="meeting"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសខែ និងឆ្នាំ -->
+        <label for="month">Month:</label>
+
+        <input
+            type="month"
+            id="month"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសសប្តាហ៍ -->
+        <label for="week">Week:</label>
+
+        <input
+            type="week"
+            id="week"
+        >
+
+        <br><br>
+
+        <!-- Checkbox អាចជ្រើសរើសបានច្រើន -->
+        <p>Skills:</p>
+
+        <input
+            type="checkbox"
+            id="html"
+            name="skills"
+        >
+
+        <label for="html">HTML</label>
+
+        <input
+            type="checkbox"
+            id="css"
+            name="skills"
+        >
+
+        <label for="css">CSS</label>
+
+        <input
+            type="checkbox"
+            id="javascript"
+            name="skills"
+        >
+
+        <label for="javascript">JavaScript</label>
+
+        <br><br>
+
+        <!-- Radio អាចជ្រើសរើសបានតែមួយ -->
+        <p>Gender:</p>
+
+        <input
+            type="radio"
+            id="male"
+            name="gender"
+        >
+
+        <label for="male">Male</label>
+
+        <input
+            type="radio"
+            id="female"
+            name="gender"
+        >
+
+        <label for="female">Female</label>
+
+        <br><br>
+
+        <!-- Input សម្រាប់ Upload File -->
+        <label for="photo">Profile Photo:</label>
+
+        <input
+            type="file"
+            id="photo"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់ជ្រើសរើសពណ៌ -->
+        <label for="color">Choose Color:</label>
+
+        <input
+            type="color"
+            id="color"
+        >
+
+        <br><br>
+
+        <!-- Input សម្រាប់បង្កើត Slider -->
+        <label for="volume">Volume:</label>
+
+        <input
+            type="range"
+            id="volume"
+            min="0"
+            max="100"
+        >
+
+        <br><br>
+
+        <!-- Input នេះលាក់ពី User ប៉ុន្តែអាចផ្ញើ Data បាន -->
+        <input
+            type="hidden"
+            name="user_id"
+            value="1001"
+        >
+
+        <!-- Button សម្រាប់ Submit Form -->
+        <input
+            type="submit"
+            value="Register"
+        >
+
+        <!-- Button សម្រាប់លុប Data ក្នុង Form -->
+        <input
+            type="reset"
+            value="Clear"
+        >
+
+        <!-- Button ធម្មតា ដែលអាចប្រើជាមួយ JavaScript -->
+        <input
+            type="button"
+            value="Click Me"
+        >
+
+    </form>
+
+</body>
+
+</html>

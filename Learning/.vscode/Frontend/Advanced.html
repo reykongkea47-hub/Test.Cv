@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced HTML Tags</title>
+</head>
+
+<body>
+
+    <!-- canvas ប្រើសម្រាប់គូរ Graphics ដោយប្រើ JavaScript -->
+    <canvas id="myCanvas" width="300" height="150">
+        Browser របស់អ្នកមិន Support Canvas ទេ។
+    </canvas>
+
+    <br><br>
+
+    <!-- svg ប្រើសម្រាប់បង្កើត Vector Graphics -->
+    <svg width="300" height="150">
+
+        <!-- rect ប្រើសម្រាប់បង្កើតចតុកោណ -->
+        <rect
+            width="200"
+            height="100"
+            x="20"
+            y="20"
+            fill="lightblue"
+        />
+
+    </svg>
+
+    <br><br>
+
+    <!-- details ប្រើសម្រាប់បង្កើត Content ដែលអាចបើក និងបិទបាន -->
+    <details>
+
+        <!-- summary គឺជាចំណងជើងដែល User អាចចុចបាន -->
+        <summary>ចុចដើម្បីមើលព័ត៌មាន</summary>
+
+        <!-- ព័ត៌មាននេះនឹងបង្ហាញនៅពេល details ត្រូវបានបើក -->
+        <p>
+            HTML គឺជា Markup Language សម្រាប់បង្កើត Structure របស់ Website។
+        </p>
+
+    </details>
+
+    <br>
+
+    <!-- dialog ប្រើសម្រាប់បង្កើត Dialog ឬ Popup -->
+    <dialog open>
+
+        <!-- អត្ថបទនៅក្នុង Dialog -->
+        <p>នេះគឺជា Dialog Box។</p>
+
+        <!-- button ប្រើសម្រាប់បិទ Dialog -->
+        <button>Close</button>
+
+    </dialog>
+
+    <br><br><br>
+
+    <!-- progress ប្រើសម្រាប់បង្ហាញ Progress របស់ការងារមួយ -->
+    <label for="download">Download:</label>
+
+    <progress
+        id="download"
+        value="70"
+        max="100"
+    >
+        70%
+    </progress>
+
+    <br><br>
+
+    <!-- meter ប្រើសម្រាប់បង្ហាញតម្លៃនៅក្នុង Range -->
+    <label for="score">Score:</label>
+
+    <meter
+        id="score"
+        value="80"
+        min="0"
+        max="100"
+    >
+        80%
+    </meter>
+
+    <br><br>
+
+    <!-- template ប្រើសម្រាប់រក្សាទុក HTML ដែលមិនបង្ហាញភ្លាមៗ -->
+    <!-- ជាទូទៅវាត្រូវប្រើជាមួយ JavaScript -->
+    <template id="userTemplate">
+
+        <!-- Content នៅក្នុង template នឹងមិនបង្ហាញដោយផ្ទាល់ -->
+        <div>
+            <h3>User Information</h3>
+            <p>ឈ្មោះ: Kongkea</p>
+        </div>
+
+    </template>
+
+    <!-- ruby ប្រើសម្រាប់ដាក់ការបញ្ចេញសំឡេង ឬពាក្យពន្យល់លើអក្សរ -->
+    <ruby>
+        学生
+        <rt>がくせい</rt>
+    </ruby>
+
+    <br><br>
+
+    <!-- time ប្រើសម្រាប់បង្ហាញ Date ឬ Time -->
+    <p>
+        ថ្ងៃនេះគឺ
+        <time datetime="2026-09-18">
+            September 18, 2026
+        </time>
+    </p>
+
+    <p>
+        ម៉ោង
+        <time datetime="20:00">
+            8:00 PM
+        </time>
+    </p>
+
+    <!-- wbr ប្រាប់ Browser ថាអាចចុះបន្ទាត់នៅទីនេះ ប្រសិនបើចាំបាច់ -->
+    <p>
+        ThisIsAVeryLongWord<wbr>ThatCanBreakHere
+    </p>
+
+</body>
+
+</html>
