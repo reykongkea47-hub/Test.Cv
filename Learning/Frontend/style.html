@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Tutorial 1-44</title>
+
+    <style>
+
+        /* =====================================================
+           1. CSS Introduction
+           CSS ប្រើសម្រាប់ Design និង Style HTML
+        ===================================================== */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #1f2937;
+        }
+
+
+        /* =====================================================
+           2. CSS Syntax
+           Syntax = selector { property: value; }
+        ===================================================== */
+
+        .syntax-example {
+            color: #2563eb;
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           3. CSS Selectors
+           Selector ប្រើសម្រាប់ជ្រើសរើស HTML Element
+        ===================================================== */
+
+        p {
+            line-height: 1.6;
+        }
+
+        .selector-example {
+            color: #16a34a;
+        }
+
+        #selector-id {
+            color: #dc2626;
+        }
+
+
+        /* =====================================================
+           4. CSS How To
+           CSS អាចប្រើជា Internal CSS, External CSS, Inline CSS
+        ===================================================== */
+
+        .how-to {
+            background: #eff6ff;
+            padding: 15px;
+            border-left: 4px solid #2563eb;
+        }
+
+
+        /* =====================================================
+           5. CSS Colors
+           CSS Colors អាចប្រើ Name, HEX, RGB, RGBA
+        ===================================================== */
+
+        .color-name {
+            color: red;
+        }
+
+        .color-hex {
+            color: #2563eb;
+        }
+
+        .color-rgb {
+            color: rgb(22, 163, 74);
+        }
+
+        .color-rgba {
+            color: rgba(220, 38, 38, 0.6);
+        }
+
+
+        /* =====================================================
+           6. CSS Backgrounds
+           Background ប្រើសម្រាប់កំណត់ពណ៌ផ្ទៃខាងក្រោយ
+        ===================================================== */
+
+        .background-example {
+            background-color: #dbeafe;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           7. CSS Borders
+           Border ប្រើសម្រាប់ដាក់ស៊ុមជុំវិញ Element
+        ===================================================== */
+
+        .border-example {
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+
+        /* =====================================================
+           8. CSS Margins
+           Margin = ចន្លោះនៅខាងក្រៅ Element
+        ===================================================== */
+
+        .margin-example {
+            margin: 30px;
+            padding: 15px;
+            background: #dbeafe;
+        }
+
+
+        /* =====================================================
+           9. CSS Padding
+           Padding = ចន្លោះនៅខាងក្នុង Element
+        ===================================================== */
+
+        .padding-example {
+            padding: 30px;
+            background: #dcfce7;
+        }
+
+
+        /* =====================================================
+           10. CSS Height / Width
+           Width = ទទឹង
+           Height = កម្ពស់
+        ===================================================== */
+
+        .size-example {
+            width: 250px;
+            height: 100px;
+            background: #fef3c7;
+            padding: 15px;
+        }
+
+
+        /* =====================================================
+           11. CSS Box Model
+           Box Model = Content + Padding + Border + Margin
+        ===================================================== */
+
+        .box-model-example {
+            width: 250px;
+            padding: 20px;
+            border: 5px solid #2563eb;
+            margin: 20px;
+            background: #dbeafe;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           12. CSS Text
+           Text properties ប្រើសម្រាប់កែ Style អក្សរ
+        ===================================================== */
+
+        .text-example {
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           13. CSS Fonts
+           Font properties ប្រើសម្រាប់កំណត់ប្រភេទ និងទំហំអក្សរ
+        ===================================================== */
+
+        .font-example {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+
+        /* =====================================================
+           14. CSS Links
+           Style សម្រាប់ Link
+        ===================================================== */
+
+        .link-example {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-example:hover {
+            color: #dc2626;
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           15. CSS Lists
+           Style សម្រាប់ List
+        ===================================================== */
+
+        .list-example {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-example li {
+            background: #e0f2fe;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+
+        /* =====================================================
+           16. CSS Tables
+           Style សម្រាប់ Table
+        ===================================================== */
+
+        .table-example {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-example th,
+        .table-example td {
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            text-align: left;
+        }
+
+        .table-example th {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        /* =====================================================
+           17. CSS Display
+           Display កំណត់របៀប Element បង្ហាញ
+        ===================================================== */
+
+        .display-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .display-box {
+            padding: 20px;
+            background: #bfdbfe;
+            border-radius: 8px;
+        }
+
+
+        /* =====================================================
+           18. CSS Max-width
+           Max-width កំណត់ទទឹងអតិបរមា
+        ===================================================== */
+
+        .max-width-example {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            background: #fef3c7;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           19. CSS Position
+           Position ប្រើសម្រាប់កំណត់ទីតាំង Element
+        ===================================================== */
+
+        .position-parent {
+            position: relative;
+            height: 150px;
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .position-child {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+        }
+
+
+        /* =====================================================
+           20. CSS Z-index
+           Z-index កំណត់ថា Element មួយនៅខាងមុខ ឬខាងក្រោយ
+        ===================================================== */
+
+        .z-index-container {
+            position: relative;
+            height: 140px;
+        }
+
+        .z-box-one {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 120px;
+            height: 80px;
+            background: #60a5fa;
+            z-index: 1;
+        }
+
+        .z-box-two {
+            position: absolute;
+            top: 50px;
+            left: 80px;
+            width: 120px;
+            height: 80px;
+            background: #2563eb;
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           21. CSS Overflow
+           Overflow គ្រប់គ្រង Content ដែលលើសទំហំ Element
+        ===================================================== */
+
+        .overflow-example {
+            width: 100%;
+            height: 80px;
+            overflow: auto;
+            background: #f3f4f6;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           22. CSS Align
+           Align ប្រើសម្រាប់រៀបចំទីតាំង Content
+        ===================================================== */
+
+        .align-example {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background: #dbeafe;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           23. CSS Flexbox
+           Flexbox ប្រើសម្រាប់រៀបចំ Elements ក្នុង Row/Column
+        ===================================================== */
+
+        .flex-example {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .flex-card {
+            flex: 1;
+            min-width: 150px;
+            padding: 25px;
+            text-align: center;
+            background: #2563eb;
+            color: white;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           24. CSS Combinators
+           Combinator ប្រើសម្រាប់បង្ហាញទំនាក់ទំនងរវាង Elements
+        ===================================================== */
+
+        .combinator-example p {
+            color: #16a34a;
+        }
+
+        .combinator-example > span {
+            color: #dc2626;
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           25. CSS Pseudo-classes
+           Pseudo-class ដូចជា :hover និង :active
+        ===================================================== */
+
+        .pseudo-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        .pseudo-button:hover {
+            background: #1d4ed8;
+        }
+
+        .pseudo-button:active {
+            transform: scale(0.95);
+        }
+
+
+        /* =====================================================
+           26. CSS Pseudo-elements
+           Pseudo-element ដូចជា ::before និង ::after
+        ===================================================== */
+
+        .pseudo-element-example::before {
+            content: "★ ";
+            color: #f59e0b;
+        }
+
+        .pseudo-element-example::after {
+            content: " ✓";
+            color: #16a34a;
+        }
+
+
+        /* =====================================================
+           27. CSS Opacity
+           Opacity កំណត់កម្រិតភាពថ្លា
+        ===================================================== */
+
+        .opacity-example {
+            opacity: 0.5;
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           28. CSS Navigation Bar
+           Navigation Bar ប្រើសម្រាប់ Menu របស់ Website
+        ===================================================== */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111827;
+            padding: 15px 20px;
+            border-radius: 10px;
+        }
+
+        .navbar-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-links a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =====================================================
+           29. CSS Dropdown
+           Dropdown បង្ហាញ Menu បន្ថែមនៅពេល Hover
+        ===================================================== */
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            min-width: 160px;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            color: #1f2937;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #eff6ff;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+
+        /* =====================================================
+           30. CSS Forms
+           Style សម្រាប់ Form, Input, Select និង Textarea
+        ===================================================== */
+
+        .form-example {
+            max-width: 500px;
+        }
+
+        .form-example label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .form-example input,
+        .form-example select,
+        .form-example textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-example button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           31. CSS Attribute Selectors
+           ជ្រើស Element តាម Attribute
+        ===================================================== */
+
+        input[type="email"] {
+            background: #eff6ff;
+        }
+
+
+        /* =====================================================
+           32. CSS Units
+           Units ដូចជា px, %, rem និង vw
+        ===================================================== */
+
+        .units-px {
+            font-size: 20px;
+        }
+
+        .units-percent {
+            width: 50%;
+            background: #bfdbfe;
+            padding: 10px;
+        }
+
+        .units-rem {
+            font-size: 1.5rem;
+        }
+
+        .units-vw {
+            font-size: 3vw;
+        }
+
+
+        /* =====================================================
+           33. CSS Inheritance
+           Child Element អាចទទួល Style ពី Parent
+        ===================================================== */
+
+        .inheritance-parent {
+            color: #2563eb;
+        }
+
+
+        /* =====================================================
+           34. CSS Specificity
+           Specificity កំណត់ថា CSS Rule មួយណាមាន Priority
+        ===================================================== */
+
+        .specificity-example {
+            color: blue;
+        }
+
+        #specificity-id {
+            color: green;
+        }
+
+
+        /* =====================================================
+           35. CSS !important
+           !important បង្កើន Priority របស់ CSS Rule
+        ===================================================== */
+
+        .important-example {
+            color: red !important;
+        }
+
+
+        /* =====================================================
+           36. CSS Math Functions
+           calc() និង clamp() ប្រើសម្រាប់គណនា Size
+        ===================================================== */
+
+        .calc-example {
+            width: calc(100% - 40px);
+            padding: 20px;
+            background: #dcfce7;
+            box-sizing: border-box;
+        }
+
+        .clamp-example {
+            font-size: clamp(20px, 4vw, 42px);
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           37. CSS Optimization
+           សរសេរ CSS ឱ្យស្អាត និង Reusable
+        ===================================================== */
+
+        .optimized-card {
+            padding: 20px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           38. CSS Accessibility
+           ធ្វើឱ្យ Website ងាយប្រើសម្រាប់អ្នកប្រើប្រាស់
+        ===================================================== */
+
+        .accessibility-button {
+            padding: 12px 20px;
+            border: 2px solid #1d4ed8;
+            background: white;
+            color: #1d4ed8;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .accessibility-button:focus {
+            outline: 3px solid #93c5fd;
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================================
+           39. CSS Website Layout
+           បង្កើត Layout របស់ Website
+        ===================================================== */
+
+        .website-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 300px;
+        }
+
+        .layout-sidebar {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+        }
+
+        .layout-content {
+            padding: 20px;
+            background: white;
+        }
+
+
+        /* =====================================================
+           40. CSS Responsive Design
+           Website អាចសម្របតាមទំហំ Screen
+        ===================================================== */
+
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .responsive-card {
+            padding: 25px;
+            background: #dbeafe;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           41. CSS Card Design
+           Card ប្រើសម្រាប់បង្ហាញ Content
+        ===================================================== */
+
+        .card-example {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =====================================================
+           42. CSS Button
+           Style សម្រាប់ Button
+        ===================================================== */
+
+        .button-example {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button-example:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           43. CSS Responsive
+           Media Query សម្រាប់ Screen តូច
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navbar-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .responsive-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .website-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .layout-sidebar {
+                text-align: center;
+            }
+        }
+
+
+        /* =====================================================
+           44. Complete Website Layout
+           Website Layout ពេញលេញ មាន Header Main និង Footer
+        ===================================================== */
+
+        .final-layout {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 500px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .final-header {
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+        }
+
+        .final-main {
+            padding: 40px;
+        }
+
+        .final-footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* =====================================================
+           General Section Style
+           Style សម្រាប់ Section ទាំងអស់
+        ===================================================== */
+
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        .code {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CSS Tutorial 1-44
+         Main container សម្រាប់មេរៀន CSS ទាំងអស់
+    ===================================================== -->
+
+    <div class="section">
+        <h1>CSS Tutorial 1-44</h1>
+        <p>Complete CSS examples for learning.</p>
+    </div>
+
+
+    <!-- =====================================================
+         1. CSS Introduction
+         CSS ប្រើសម្រាប់ Style HTML
+    ===================================================== -->
+
+    <div class="section">
+        <h2>1. CSS Introduction</h2>
+
+        <p>CSS is used to style HTML elements.</p>
+
+        <div class="code">
+            h1 { color: blue; }
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         2. CSS Syntax
+         Syntax របស់ CSS
+    ===================================================== -->
+
+    <div class="section">
+        <h2>2. CSS Syntax</h2>
+
+        <p class="syntax-example">
+            This text demonstrates CSS syntax.
+        </p>
+
+        <div class="code">
+            selector {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+            }
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         3. CSS Selectors
+         Element, Class និង ID Selector
+    ===================================================== -->
+
+    <div class="section">
+        <h2>3. CSS Selectors</h2>
+
+        <p>Element Selector</p>
+
+        <p class="selector-example">
+            Class Selector
+        </p>
+
+        <p id="selector-id">
+            ID Selector
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         4. CSS How To
+         វិធីប្រើ CSS
+    ===================================================== -->
+
+    <div class="section">
+        <h2>4. CSS How To</h2>
+
+        <div class="how-to">
+            This example represents an External/Internal CSS style.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         5. CSS Colors
+         Color Name, HEX, RGB និង RGBA
+    ===================================================== -->
+
+    <div class="section">
+        <h2>5. CSS Colors</h2>
+
+        <p class="color-name">
+            Color Name: Red
+        </p>
+
+        <p class="color-hex">
+            HEX: #2563eb
+        </p>
+
+        <p class="color-rgb">
+            RGB: rgb(22, 163, 74)
+        </p>
+
+        <p class="color-rgba">
+            RGBA: rgba(220, 38, 38, 0.6)
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         6. CSS Backgrounds
+         Background Color
+    ===================================================== -->
+
+    <div class="section">
+        <h2>6. CSS Backgrounds</h2>
+
+        <div class="background-example">
+            Background Color Example
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         7. CSS Borders
+         Border និង Border Radius
+    ===================================================== -->
+
+    <div class="section">
+        <h2>7. CSS Borders</h2>
+
+        <div class="border-example">
+            This box has a border and rounded corners.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         8. CSS Margins
+         ចន្លោះខាងក្រៅ Element
+    ===================================================== -->
+
+    <div class="section">
+        <h2>8. CSS Margins</h2>
+
+        <div class="margin-example">
+            This element has 30px margin.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         9. CSS Padding
+         ចន្លោះខាងក្នុង Element
+    ===================================================== -->
+
+    <div class="section">
+        <h2>9. CSS Padding</h2>
+
+        <div class="padding-example">
+            This element has 30px padding.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         10. CSS Height / Width
+         កំណត់ទំហំ Element
+    ===================================================== -->
+
+    <div class="section">
+        <h2>10. CSS Height / Width</h2>
+
+        <div class="size-example">
+            Width: 250px<br>
+            Height: 100px
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         11. CSS Box Model
+         Content + Padding + Border + Margin
+    ===================================================== -->
+
+    <div class="section">
+        <h2>11. CSS Box Model</h2>
+
+        <div class="box-model-example">
+            Content + Padding + Border + Margin
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         12. CSS Text
+         Text Alignment និង Text Style
+    ===================================================== -->
+
+    <div class="section">
+        <h2>12. CSS Text</h2>
+
+        <p class="text-example">
+            CSS Text Example
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         13. CSS Fonts
+         Font Family, Size, Weight និង Style
+    ===================================================== -->
+
+    <div class="section">
+        <h2>13. CSS Fonts</h2>
+
+        <p class="font-example">
+            This is a font example.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         14. CSS Links
+         Style សម្រាប់ Link និង Hover
+    ===================================================== -->
+
+    <div class="section">
+        <h2>14. CSS Links</h2>
+
+        <a href="#" class="link-example">
+            Hover over this link
+        </a>
+    </div>
+
+
+    <!-- =====================================================
+         15. CSS Lists
+         Style សម្រាប់ List
+    ===================================================== -->
+
+    <div class="section">
+        <h2>15. CSS Lists</h2>
+
+        <ul class="list-example">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+
+    <!-- =====================================================
+         16. CSS Tables
+         Style សម្រាប់ Table
+    ===================================================== -->
+
+    <div class="section">
+        <h2>16. CSS Tables</h2>
+
+        <table class="table-example">
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+
+            <tr>
+                <td>Kongkea</td>
+                <td>CSS</td>
+            </tr>
+
+            <tr>
+                <td>Dara</td>
+                <td>JavaScript</td>
+            </tr>
+
+        </table>
+    </div>
+
+
+    <!-- =====================================================
+         17. CSS Display
+         Display Flex
+    ===================================================== -->
+
+    <div class="section">
+        <h2>17. CSS Display</h2>
+
+        <div class="display-container">
+
+            <div class="display-box">
+                Block
+            </div>
+
+            <div class="display-box">
+                Flex
+            </div>
+
+            <div class="display-box">
+                Box
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         18. CSS Max-width
+         កំណត់ទទឹងអតិបរមា
+    ===================================================== -->
+
+    <div class="section">
+        <h2>18. CSS Max-width</h2>
+
+        <div class="max-width-example">
+            This container has max-width: 700px.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         19. CSS Position
+         Relative និង Absolute Position
+    ===================================================== -->
+
+    <div class="section">
+        <h2>19. CSS Position</h2>
+
+        <div class="position-parent">
+
+            <div class="position-child">
+                Absolute
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         20. CSS Z-index
+         កំណត់ Element ណានៅខាងមុខ
+    ===================================================== -->
+
+    <div class="section">
+        <h2>20. CSS Z-index</h2>
+
+        <div class="z-index-container">
+
+            <div class="z-box-one"></div>
+
+            <div class="z-box-two"></div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         21. CSS Overflow
+         គ្រប់គ្រង Content ដែលលើស Container
+    ===================================================== -->
+
+    <div class="section">
+        <h2>21. CSS Overflow</h2>
+
+        <div class="overflow-example">
+            This is a long text inside a small container.
+            The overflow property controls what happens
+            when content is larger than the element.
+            You can scroll this container when necessary.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         22. CSS Align
+         Center Content
+    ===================================================== -->
+
+    <div class="section">
+        <h2>22. CSS Align</h2>
+
+        <div class="align-example">
+            Centered Content
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         23. CSS Flexbox
+         រៀបចំ Elements ជា Row ឬ Column
+    ===================================================== -->
+
+    <div class="section">
+        <h2>23. CSS Flexbox</h2>
+
+        <div class="flex-example">
+
+            <div class="flex-card">
+                HTML
+            </div>
+
+            <div class="flex-card">
+                CSS
+            </div>
+
+            <div class="flex-card">
+                JavaScript
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         24. CSS Combinators
+         បង្ហាញទំនាក់ទំនងរវាង Elements
+    ===================================================== -->
+
+    <div class="section">
+        <h2>24. CSS Combinators</h2>
+
+        <div class="combinator-example">
+
+            <p>
+                This paragraph is inside div.
+            </p>
+
+            <span>
+                This span is a direct child.
+            </span>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         25. CSS Pseudo-classes
+         :hover និង :active
+    ===================================================== -->
+
+    <div class="section">
+        <h2>25. CSS Pseudo-classes</h2>
+
+        <button class="pseudo-button">
+            Hover / Click Me
+        </button>
+    </div>
+
+
+    <!-- =====================================================
+         26. CSS Pseudo-elements
+         ::before និង ::after
+    ===================================================== -->
+
+    <div class="section">
+        <h2>26. CSS Pseudo-elements</h2>
+
+        <p class="pseudo-element-example">
+            Pseudo-element Example
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         27. CSS Opacity
+         កំណត់ភាពថ្លារបស់ Element
+    ===================================================== -->
+
+    <div class="section">
+        <h2>27. CSS Opacity</h2>
+
+        <div class="opacity-example">
+            Opacity: 0.5
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         28. CSS Navigation Bar
+         Navigation Menu
+    ===================================================== -->
+
+    <div class="section">
+        <h2>28. CSS Navigation Bar</h2>
+
+        <nav class="navbar">
+
+            <div class="navbar-logo">
+                CodeLearning
+            </div>
+
+            <ul class="navbar-links">
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Courses</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Login</a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+
+
+    <!-- =====================================================
+         29. CSS Dropdown
+         Dropdown Menu បង្ហាញនៅពេល Hover
+    ===================================================== -->
+
+    <div class="section">
+        <h2>29. CSS Dropdown</h2>
+
+        <div class="dropdown">
+
+            <button class="dropdown-button">
+                Courses ▼
+            </button>
+
+            <div class="dropdown-menu">
+
+                <a href="#">HTML</a>
+
+                <a href="#">CSS</a>
+
+                <a href="#">JavaScript</a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         30. CSS Forms
+         Form Input Select Textarea និង Button
+    ===================================================== -->
+
+    <div class="section">
+        <h2>30. CSS Forms</h2>
+
+        <form class="form-example">
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <label for="course">
+                Course
+            </label>
+
+            <select id="course">
+
+                <option>HTML</option>
+
+                <option>CSS</option>
+
+                <option>JavaScript</option>
+
+            </select>
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                rows="4"
+                placeholder="Write your message"
+            ></textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+    </div>
+
+
+    <!-- =====================================================
+         31. CSS Attribute Selectors
+         ជ្រើស Element តាម Attribute
+    ===================================================== -->
+
+    <div class="section">
+        <h2>31. CSS Attribute Selectors</h2>
+
+        <input
+            type="email"
+            placeholder="Email input uses attribute selector"
+        >
+    </div>
+
+
+    <!-- =====================================================
+         32. CSS Units
+         px, %, rem និង vw
+    ===================================================== -->
+
+    <div class="section">
+        <h2>32. CSS Units</h2>
+
+        <p class="units-px">
+            20px font size
+        </p>
+
+        <div class="units-percent">
+            50% width
+        </div>
+
+        <p class="units-rem">
+            1.5rem font size
+        </p>
+
+        <p class="units-vw">
+            3vw font size
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         33. CSS Inheritance
+         Child ទទួល Style ពី Parent
+    ===================================================== -->
+
+    <div class="section">
+        <h2>33. CSS Inheritance</h2>
+
+        <div class="inheritance-parent">
+
+            <p>
+                This text inherits color from the parent.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         34. CSS Specificity
+         ID មាន Priority ខ្ពស់ជាង Class
+    ===================================================== -->
+
+    <div class="section">
+        <h2>34. CSS Specificity</h2>
+
+        <p
+            id="specificity-id"
+            class="specificity-example"
+        >
+            ID selector wins over class selector.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         35. CSS !important
+         បង្កើន Priority របស់ CSS Rule
+    ===================================================== -->
+
+    <div class="section">
+        <h2>35. CSS !important</h2>
+
+        <p class="important-example">
+            This text uses !important.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         36. CSS Math Functions
+         calc() និង clamp()
+    ===================================================== -->
+
+    <div class="section">
+        <h2>36. CSS Math Functions</h2>
+
+        <div class="calc-example">
+            Width uses calc(100% - 40px).
+        </div>
+
+        <p class="clamp-example">
+            Responsive Font
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         37. CSS Optimization
+         CSS ស្អាត និង Reusable
+    ===================================================== -->
+
+    <div class="section">
+        <h2>37. CSS Optimization</h2>
+
+        <div class="optimized-card">
+            This is a reusable and simple CSS component.
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         38. CSS Accessibility
+         ធ្វើឱ្យ Website ងាយប្រើ
+    ===================================================== -->
+
+    <div class="section">
+        <h2>38. CSS Accessibility</h2>
+
+        <button class="accessibility-button">
+            Keyboard Focus Button
+        </button>
+
+        <p>
+            Try pressing the Tab key to see the focus outline.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         39. CSS Website Layout
+         Sidebar និង Main Content
+    ===================================================== -->
+
+    <div class="section">
+        <h2>39. CSS Website Layout</h2>
+
+        <div class="website-layout">
+
+            <aside class="layout-sidebar">
+                Sidebar
+            </aside>
+
+            <main class="layout-content">
+                Main Content
+            </main>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         40. CSS Responsive Design
+         Layout សម្របតាម Screen
+    ===================================================== -->
+
+    <div class="section">
+        <h2>40. CSS Responsive Design</h2>
+
+        <div class="responsive-grid">
+
+            <div class="responsive-card">
+                Card 1
+            </div>
+
+            <div class="responsive-card">
+                Card 2
+            </div>
+
+            <div class="responsive-card">
+                Card 3
+            </div>
+
+        </div>
+
+        <p>
+            Resize your browser window to see the responsive layout.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         41. CSS Card Design
+         បង្កើត Card សម្រាប់ Course
+    ===================================================== -->
+
+    <div class="section">
+        <h2>41. CSS Card Design</h2>
+
+        <div class="card-example">
+
+            <h3>
+                HTML Course
+            </h3>
+
+            <p>
+                Learn HTML from beginner to advanced.
+            </p>
+
+            <button class="button-example">
+                View Course
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         42. CSS Button
+         Style សម្រាប់ Button
+    ===================================================== -->
+
+    <div class="section">
+        <h2>42. CSS Button</h2>
+
+        <button class="button-example">
+            Click Me
+        </button>
+    </div>
+
+
+    <!-- =====================================================
+         43. CSS Responsive
+         Media Query សម្រាប់ Screen តូចជាង 768px
+    ===================================================== -->
+
+    <div class="section">
+        <h2>43. CSS Responsive</h2>
+
+        <p>
+            The media query changes the layout when the screen
+            becomes smaller than 768px.
+        </p>
+
+        <div class="responsive-grid">
+
+            <div class="responsive-card">
+                HTML
+            </div>
+
+            <div class="responsive-card">
+                CSS
+            </div>
+
+            <div class="responsive-card">
+                JavaScript
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         44. Complete Website Layout
+         Website ពេញលេញ
+         Header + Main + Footer
+    ===================================================== -->
+
+    <div class="section">
+        <h2>44. Complete Website Layout</h2>
+
+        <div class="final-layout">
+
+            <!-- Header -->
+            <header class="final-header">
+
+                <h2>
+                    CodeLearning
+                </h2>
+
+                <p>
+                    Learn Coding Easily
+                </p>
+
+            </header>
+
+
+            <!-- Main Content -->
+            <main class="final-main">
+
+                <h1>
+                    Welcome to CodeLearning
+                </h1>
+
+                <p>
+                    Learn HTML, CSS, JavaScript and programming
+                    through practical examples.
+                </p>
+
+
+                <!-- Course Cards -->
+                <div class="responsive-grid">
+
+                    <div class="card-example">
+
+                        <h3>
+                            HTML
+                        </h3>
+
+                        <p>
+                            Learn website structure.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-example">
+
+                        <h3>
+                            CSS
+                        </h3>
+
+                        <p>
+                            Learn website design.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-example">
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Learn website functionality.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+            <!-- Footer -->
+            <footer class="final-footer">
+
+                CodeLearning © 2026
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

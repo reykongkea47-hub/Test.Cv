@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Examples</title>
+    <link rel="stylesheet" href="../style/home.css">
+
+    <style>
+        /* CSS Selectors */
+
+        p {
+            color: aliceblue;
+            background-color: #333;
+            padding: 10px;
+        }
+
+           .head {
+         color: blue;
+        }
+
+        #title {
+            color: rgb(180, 175, 175);
+        }
+
+        /* 1. Background Color */
+        /* កំណត់ពណ៌ផ្ទៃខាងក្រោយ */
+
+        .card {
+            background-color: #2563eb;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* 2. Background Image */
+        /* ដាក់រូបភាពជាផ្ទៃខាងក្រោយ */
+
+        .hero {
+            background-image: url("hero.jpg");
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 3. Background Size */
+        /* កំណត់ទំហំរូបភាព Background */
+
+        .hero-size {
+            background-image: url("hero.jpg");
+            background-size: cover;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 4. Background Position */
+        /* កំណត់ទីតាំងរូបភាព Background */
+
+        .hero-position {
+            background-image: url("hero.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 5. Background Repeat */
+        /* កំណត់ថារូបភាពអាច repeat ឬអត់ */
+
+        .hero-repeat {
+            background-image: url("hero.jpg");
+            background-repeat: no-repeat;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 6. Background Shorthand */
+        /* សរសេរ Background properties ជាច្រើនក្នុងមួយបន្ទាត់ */
+
+        .hero-shorthand {
+            background: url("hero.jpg") center / cover no-repeat;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 7. Background Attachment */
+
+        .hero-attachment {
+            background-image: url("hero.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 8. Background Blend Mode */
+
+        .hero-blend {
+            background-image: url("hero.jpg");
+            background-color: rgba(37, 99, 235, 0.5);
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        /* 9. Background Origin */
+
+        .hero-origin {
+            background-image: url("hero.jpg");
+            background-origin: border-box;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            padding: 20px;
+            border: 10px solid rgba(254, 247, 247, 0.3);
+            margin-bottom: 20px;
+        }
+
+        /* 10. Background Clip */
+
+        .hero-clip {
+            background-image: url("hero.jpg");
+            background-clip: padding-box;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            padding: 20px;
+            border: 10px solid transparent;
+            margin-bottom: 20px;
+        }
+
+        /* CSS Lists */
+
+        .nav-list {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Table */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        /* Table Header and Data */
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Table Header */
+
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Table Row Hover */
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Status */
+
+        .active {
+            color: green;
+            font-weight: bold;
+        }
+
+        .inactive {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+
+        .edit-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background-color: #dc2626;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Edit Button Hover */
+
+        .edit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Delete Button Hover */
+
+        .delete-btn:hover {
+            background-color: #b91c1c;
+        }
+
+        /* CSS Text */
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /* CSS Link Hover */
+
+        .home-link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .home-link:hover {
+            color: red;
+            text-decoration: underline;
+        }
+/*  1. block នឹងចាប់ផ្តើមនៅ ជួរថ្មី ហើយជាទូទៅវាអាចយកទទឹងពេញ Parent។
+    2. inline នឹងបង្ហាញនៅជាប់គ្នា ហើយវាមិនអាចយកទទឹងពេញ Parent។
+    3 . inline-block នឹងបង្ហាញនៅជាប់គ្នា ហើយវាអាចយកទទឹងពេញ Parent។
+    4. none នឹងលាក់ Element មិនអោយបង្ហាញនៅលើ Page។
+      */
+    .box {
+   
+    display: flex-box;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+/*Flex គឺសំខាន់ខ្លាំងសម្រាប់ Navbar, Cards, Buttons, Centering និង Responsive Layout។*/
+.box2{
+    display: flex;
+    gap: 10px;
+    background-color: lightblue;
+    padding: 20px;
+}
+/*Grid គឺសំខាន់សម្រាប់ Layout ដែលមាន Columns និង Rows។*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.container div {
+    background-color: lightcoral;
+    padding: 20px;
+}
+
+.box3 {
+ 
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.box4 {
+    position: relative;
+    top: 50px;
+   left: 100px;
+}
+
+.container1{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: lightgray;
+}
+
+.box5 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(197, 39, 18);
+    padding: 20px;
+}
+
+.navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: blue;
+    color: white;
+    padding: 15px;
+}
+.box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.bokloy {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+.box11 {
+    background-color: lightblue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.box12 {
+    background-color: lightcoral;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+
+/*modal*/
+/*
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 1000;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid black;
+}*/
+/*
+.content12 {
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: 500;
+    width: 150px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+}*/
+/*
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    background-color: lightblue;
+    z-index: 200;
+}
+
+.content13 {
+    margin-left: 240px;
+}*/
+
+/*
+.container p {
+    color: red;
+}
+
+.container > p {
+    font-size: 20px;
+}
+
+h2 + p {
+    background-color: yellow;
+}
+
+h2 ~ p {
+    border: 1px solid black;
+}
+    */
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #2563eb;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #dbeafe;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f5f9;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+input[type="email"] {
+    border: 2px solid rgb(122, 215, 8);
+}
+input[type="text"] {
+    background-color: #1d3954;
+}
+
+input[type="password"] {
+    background-color: #8c3737;
+}
+
+a[target="_blank"] {
+    color: red;
+}
+/*CSS Form Styles*/
+/*
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+*/
+.body {
+    counter-reset: section;
+}
+
+h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+/*
+
+html { font-size: 16px; } 
+body { margin: 0; font-family: Arial, sans-serif; } 
+.px { width: 300px; height: 100px; background-color: lightblue; padding: 10px; } 
+.percent { width: 80%; height: 100px; background-color: lightgreen; padding: 10px; } 
+.rem { font-size: 2rem; background-color: lightyellow; padding: 1rem; } 
+.em { font-size: 20px; background-color: lightpink; padding: 1em; } 
+.em p { font-size: 1.5em; }
+ .vw { width: 50vw; background-color: lightcoral; padding: 10px; } 
+ .vh { height: 30vh; background-color: lightgray; padding: 10px; }
+  */
+  p {
+    color: red;
+}
+
+.text {
+    color: blue;
+}
+/*
+#title {
+    color: green;
+}
+ .title {
+            color: red !important;
+        }
+
+        .title {
+            color: blue;
+  }*/
+</style>
+</head>
+
+<body>
+
+    <!-- CSS Selectors -->
+
+    <h1>CSS Selectors</h1>
+
+    <div>
+        <p>CSS Element Selector</p>
+
+        <p class="head">
+            CSS Class Selector
+        </p>
+
+        <p id="title">
+            CSS ID Selector
+        </p>
+    </div>
+
+    <!-- CSS How To -->
+
+    <h1 class ="head" style = "color: blue;">CSS How To</h1>
+
+    <div>
+        <!-- Inline CSS -->
+
+        <p style="color: red;">
+            Inline Style
+        </p>
+
+        <!-- Internal CSS -->
+
+        <p>
+            Internal Style
+        </p>
+
+        <!-- External CSS -->
+
+        <p>
+            External Style
+        </p>
+    </div>
+
+    <!-- CSS Colors -->
+
+    <h1>CSS Colors</h1>
+
+    <div>
+        <p style="color: red;">
+            Color Name
+        </p>
+
+        <p style="color: #123456;">
+            HEX Color
+        </p>
+
+        <p style="color: rgb(29, 239, 234);">
+            RGB Color
+        </p>
+
+        <p style="color: rgba(90, 134, 234, 0.5);">
+            RGBA Color
+        </p>
+    </div>
+
+    <!-- CSS Backgrounds -->
+
+    <h1>CSS Backgrounds</h1>
+
+    <!-- 1. Background Color -->
+
+    <h2>1. Background Color</h2>
+
+    <div class="card">
+        <img src="hero.jpg" alt="Hero Image" width="300">
+    </div>
+
+    <!-- 2. Background Image -->
+
+    <h2>2. Background Image</h2>
+
+    <div class="hero">
+    </div>
+
+    <!-- 3. Background Size -->
+
+    <h2>3. Background Size</h2>
+
+    <div class="hero-size">
+    </div>
+
+    <!-- 4. Background Position -->
+
+    <h2>4. Background Position</h2>
+
+    <div class="hero-position">
+    </div>
+    <!-- CSS Borders -->
+
+    <h1>CSS Borders</h1>
+
+    <!-- Border គឺ ស៊ុមជុំវិញ Element -->
+
+    <div style="
+        border-width: 2px;
+        border-style: solid;
+        border-color: blue;
+        padding: 20px;
+        width: 300px;
+        margin: 50px auto;
+    ">
+
+        <h2>CSS Border</h2>
+
+        <p>
+            This card has a 2px solid blue border.
+        </p>
+
+    </div>
+
+    <!-- Border Radius -->
+
+    <div style="
+        border-radius: 10px;
+        border: 2px solid green;
+        padding: 20px;
+        width: 300px;
+        margin: 50px auto;
+    ">
+
+        <h2>CSS Border Radius</h2>
+
+        <p>
+            This card has rounded corners.
+        </p>
+
+    </div>
+
+    <!-- CSS Margin -->
+
+    <!-- margin = ចន្លោះ ខាងក្រៅ element -->
+
+    <div style="
+        margin: 50px;
+        border: 2px solid red;
+        padding: 20px;
+    ">
+
+        <h2>CSS Margin</h2>
+
+        <p>
+            This card has a margin of 50px.
+        </p>
+
+    </div>
+
+    <!-- CSS Padding -->
+
+    <!-- padding = ចន្លោះ ខាងក្នុង element -->
+
+    <div style="
+        padding: 50px;
+        border: 2px solid orange;
+        margin: 50px;
+    ">
+
+        <h2>CSS Padding</h2>
+
+        <p>
+            This card has a padding of 50px.
+        </p>
+
+    </div>
+
+    <!-- CSS Height / Width -->
+
+    <div style="
+        height: 200px;
+        width: 300px;
+        border: 2px solid purple;
+        margin: 50px;
+    ">
+
+        <h2>CSS Height / Width</h2>
+
+        <p>
+            This card has a height of 200px
+            and a width of 300px.
+        </p>
+
+    </div>
+
+    <!-- CSS Box Model -->
+
+    <div style="
+        box-sizing: border-box;
+        height: 200px;
+        width: 300px;
+        border: 2px solid brown;
+        margin: 50px;
+        padding: 20px;
+    ">
+
+        <h2>CSS Box Model</h2>
+
+        <p>
+            This card uses the border-box sizing model.
+        </p>
+
+    </div>
+
+    <!-- CSS Text -->
+
+    <h1>CSS Text</h1>
+
+    <!-- Text Align -->
+
+    <h2 class="text-center">
+        Text Align Center
+    </h2>
+
+    <h2 class="text-left">
+        Text Align Left
+    </h2>
+
+    <h2 class="text-right">
+        Text Align Right
+    </h2>
+
+    <!-- Text Decoration -->
+
+    <h2 style="text-decoration: underline;">
+        Underline
+    </h2>
+
+    <h2 style="text-decoration: overline;">
+        Overline
+    </h2>
+
+    <h2 style="text-decoration: line-through;">
+        Line Through
+    </h2>
+
+    <a href="#" style="text-decoration: none;">
+        No Decoration
+    </a>
+
+    <br><br>
+
+    <!-- Text Transform -->
+
+    <p style="
+        color: black;
+        background: none;
+        text-transform: uppercase;
+    ">
+        hello world
+    </p>
+
+    <!-- Letter Spacing -->
+
+    <p style="
+        color: black;
+        background: none;
+        letter-spacing: 2px;
+    ">
+        Letter Spacing
+    </p>
+
+    <!-- Line Height -->
+
+    <p style="
+        color: black;
+        background: none;
+        line-height: 3;
+    ">
+        Line Height
+    </p>
+
+    <!-- CSS Fonts -->
+
+    <h1>CSS Fonts</h1>
+
+    <!-- Font Family -->
+
+    <p style="
+        color: black;
+        background: none;
+        font-family: Arial;
+    ">
+        Font Family
+    </p>
+
+    <!-- Font Size -->
+
+    <p style="
+        color: black;
+        background: none;
+        font-size: 16px;
+    ">
+        Font Size
+    </p>
+
+    <!-- Font Weight -->
+
+    <p style="
+        color: black;
+        background: none;
+        font-weight: bold;
+    ">
+        Font Weight
+    </p>
+
+    <!-- Font Style -->
+
+    <p style="
+        color: black;
+        background: none;
+        font-style: italic;
+    ">
+        Font Style
+    </p>
+
+    <!-- CSS Links -->
+
+    <h1>CSS Links</h1>
+
+    <a href="#" class="home-link">
+        Home
+    </a>
+
+    <!-- CSS Lists -->
+
+    <h1>CSS Lists</h1>
+
+    <div class="nav-list">
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+    </div>
+
+    <!-- CSS Tables -->
+
+    <h1>Users Table</h1>
+
+    <table>
+
+        <!-- Table Header -->
+
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        <!-- User 1 -->
+
+        <tr>
+
+            <td>Kongkea</td>
+
+            <td>
+                example@gmail.com
+            </td>
+
+            <td>
+                Admin
+            </td>
+
+            <td class="active">
+                Active
+            </td>
+
+            <td>
+                <button class="edit-btn">
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    Delete
+                </button>
+            </td>
+
+        </tr>
+
+        <!-- User 2 -->
+
+        <tr>
+
+            <td>Dara</td>
+
+            <td>
+                dara@gmail.com
+            </td>
+
+            <td>
+                Student
+            </td>
+
+            <td class="active">
+                Active
+            </td>
+
+            <td>
+                <button class="edit-btn">
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    Delete
+                </button>
+            </td>
+
+        </tr>
+
+        <!-- User 3 -->
+
+        <tr>
+
+            <td>Sokha</td>
+
+            <td>
+                sokha@gmail.com
+            </td>
+
+            <td>
+                Student
+            </td>
+
+            <td class="inactive">
+                Inactive
+            </td>
+
+            <td>
+                <button class="edit-btn">
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    Delete
+                </button>
+            </td>
+
+        </tr>
+
+    </table>
+<!--display ប្រាប់ Browser ថា Element ត្រូវបង្ហាញ និងរៀបចំ Layout យ៉ាងដូចម្តេច។--> 
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+
+<div class="box2">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+</div>
+
+<div class="container">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+    <div>Box 4</div>
+</div>
+
+<!--position ប្រើសម្រាប់កំណត់ថា Element ត្រូវដាក់នៅទីតាំងណា នៅក្នុង Web Pageមាន៥-->
+<div class="box3">Box 1</div>
+<!--relative ធ្វើឱ្យ Element រក្សាទីតាំងដើមរបស់វា ប៉ុន្តែយើងអាចប្រើ top, right, bottom, left ដើម្បីផ្លាស់ទីវា។-->
+<div class="box4">Box</div>
+<!--absolute ប្រើសម្រាប់ដាក់ Element ទៅ ទីតាំងជាក់លាក់។-->
+<div class="container1">
+    <div class="box5">Box</div>
+</div>
+
+<div class="navbar1">
+    My Website
+</div>
+
+<!--sticky មានអាកប្បកិរិយា ដូចជា normal element នៅពេលដំបូង។
+ប៉ុន្តែពេល Scroll ដល់ top: 0 វានឹង ជាប់នៅខាងលើ Screen។-->
+<div class="navbar">
+    My Navbar
+</div>
+
+<div class="content">
+    <p>Content...</p>
+    <p>Content...</p>
+    <p>Content...</p>
+    <p>Content...</p>
+</div>
+<!--z-index ប្រើសម្រាប់គ្រប់គ្រងថា Element មួយណានៅខាងមុខ និង Element មួយណានៅខាងក្រោយ នៅពេល Elements មានការត្រួតលើគ្នា។-->
+<div class="bokloy">
+
+    <div class="box box11">Box 1</div>
+
+    <div class="box box12">Box 2</div>
+
+</div>
+<!--Modal ដើម្បីឱ្យ Modal នៅខាងមុខ Content ទាំងអស់។-->
+<div class="content11">
+    <h1>My Website</h1>
+    <p>This is the main content.</p>
+    <!--dropdown មាន z-index: 500 ដូច្នេះវាអាចនៅខាងមុខ Content។-->
+    <div class="dropdown">
+    <p>Home</p>
+    <p>About</p>
+    <p>Contact</p>
+</div>
+
+<div class="modal">
+    <h2>Modal</h2>
+    <p>This modal is in front of the content.</p>
+    
+<!--dropdown មាន z-index: 500 ដូច្នេះវាអាចនៅខាងមុខ Content។-->
+    <div class="dropdown">
+    <p>Home</p>
+    <p>About</p>
+    <p>Contact</p>
+</div>
+
+<!--Sidebar មាន z-index: 200 ដូច្នេះវានៅខាងមុខ Main Content។-->
+<div class="sidebar">
+    <h2>Sidebar</h2>
+    <p>Home</p>
+    <p>Profile</p>
+    <p>Settings</p>
+</div>
+
+<div class="content13">
+    <h1>Main Content</h1>
+    <p>This is the main content.</p>
+</div>
+</div>
+
+<!--CSS Combinators ប្រើសម្រាប់បញ្ជាក់ Relationship រវាង HTML Elements។-->
+<!--ជ្រើស B ដែលនៅ ខាងក្នុង A ទោះជានៅជាន់ណាក៏ដោយ។-->
+<!-- មានន័យថា B ត្រូវជា Direct Child របស់ A។-->
+<!--Adjacent Sibling Selectorជ្រើស B ដែលនៅ ភ្លាមៗបន្ទាប់ពី A-->
+
+    <div class="container">
+
+        <h2>CSS Combinators</h2>
+
+        <p>Paragraph 1</p>
+
+        <section>
+            <p>Paragraph 2</p>
+        </section>
+
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+    </div>
+
+    <!--CSS Opacity opacity ប្រើសម្រាប់កំណត់ ភាពថ្លា (Transparency) របស់ Element។-->
+    <img class="image" style="opacity: 0.5;   width: 300px;" src="../img/image copy 3.png" alt="Example Image">
+
+
+    <!--Navigation Bar គឺជា Menu ដែលប្រើសម្រាប់ Navigate ទៅកាន់ Page ផ្សេងៗ។-->
+    <nav class="navbar">
+
+    <div class="logo">
+        CodeLearning
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Login</a>
+    </div>
+
+</nav>
+
+<!--Dropdown គឺជា Menu ដែលបង្ហាញ Sub-menu នៅពេល Mouse Hover។-->
+<div class="dropdown">
+
+    <button>Courses ▼</button>
+
+    <div class="dropdown-menu">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+    </div>
+
+</div>
+
+<!--Attribute Selector អាចជ្រើស Element តាម Attribute របស់វា។-->
+<input type="text">
+<input type="email">
+<input type="password">
+
+
+
+<form>
+
+    <label for="name">Name</label>
+    <input id="name" type="text">
+
+    <label for="email">Email</label>
+    <input id="email" type="email">
+
+    <label for="password">Password</label>
+    <input id="password" type="password">
+
+    <button type="submit">Register</button>
+
+</form>
+<!--CSS Counters អាចប្រើសម្រាប់បង្កើត លេខដោយ CSS។-->
+<div class="body">
+<h2>HTML</h2>
+<h2>CSS</h2>
+<h2>JavaScript</h2></div>
+
+<!--CSS Units គឺឯកតាសម្រាប់កំណត់ Size។-->
+<h1>CSS Units</h1> 
+<div class="px"> px → ទំហំថេរ </div> 
+<br> 
+<div class="percent"> % → ទាក់ទងទៅនឹង Parent </div> 
+<br> 
+<div class="rem"> rem → ទាក់ទងទៅនឹង Root </div> 
+<br> 
+<div class="em"> em → ទាក់ទងទៅនឹងទំហំអក្សរ <p>អក្សរនេះប្រើ 1.5em</p> 
+</div> <br> <div class="vw"> vw → ទាក់ទងទៅនឹងទទឹងរបស់អេក្រង់ </div> 
+<br> 
+<div class="vh"> vh → ទាក់ទងទៅនឹងកម្ពស់របស់អេក្រង់ </div>
+
+<!--Specificity គឺជា Priority របស់ CSS Selector។
+
+បើ CSS Rules ច្រើន Style Element ដូចគ្នា Browser ត្រូវសម្រេចថា Rule ណាឈ្នះ។-->
+<p id="title" class="text">
+    Hello
+</p>
+<!--  !important អាចធ្វើឱ្យ Declaration មួយមាន Priority ខ្ពស់ក្នុង Cascade។-->
+<h1 class="title">Hello CSS</h1>
+
+
+</body>
+
+</html>
